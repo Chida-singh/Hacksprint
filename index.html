@@ -3,31 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIGITAL CLOCK</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>DIGITAL CLOCK AND TIMER</title>
+    <link rel="stylesheet" href="./style.css"> <!-- Link to CSS -->
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">Digital Clock</div>
         <ul class="nav-links">
           <li><a href="#clock">Clock</a></li>
-          <li><a href="#timer">Timer</a></li>
-          <li><a href="#worldclock">World Clock</a></li>
-          <li><a href="#stopwatch">stopwatch</a></li>
+          <li><a href="#timer">Stop Watch</a></li>
         </ul>
     </nav>
-    <div id="body" class="container-fluid">
 
-        <div id="div1">
-          <p id="time"></p>
-          <p id="date"></p>
+    <!-- Digital Clock Section -->
+    <section id="clock-section">
+        <div class="clock">
+            <div class="inside">
+                <div class="content">
+                    <p class='days'>
+                        <span id="sun">SUN</span>
+                        <span id="mon">MON</span>
+                        <span id="tus">TUS</span>
+                        <span id="wed">WED</span>
+                        <span id="thu">THU</span>
+                        <span id="fri">FRI</span>
+                        <span id="sat">SAT</span>
+                    </p>
+                    <br>
+                    <p class='text'>
+                        <span id='hours'></span>:<span id='min'></span>:<span id='sec'></span>
+                        &nbsp;&nbsp;<span id='time'></span>
+                    </p>
+                    <p id="date">
+                        
+                        <span id='day'></span>
+                        <span id='month'></span>
+                        <span id='year'></span>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="footer" >
-        <div<h4>Digital clock</h4>
-        
-    </div>
+    </section>
 
-      
+    <!-- Timer Section -->
+    <section id="timer-section" style="display: none;">
+        <div class="timer">
+            <h2>Stop Watch</h2>
+            <div class="timer-display">
+                <span id="timer-minutes">00</span>:<span id="timer-seconds">00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="start-timer">Start</button>
+                <button id="stop-timer">Stop</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script> <!-- Link to JS -->
 </body>
 </html>

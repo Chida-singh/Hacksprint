@@ -1,12 +1,211 @@
-.navbar{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between; /* Distribute items evenly */
-  align-items: center; 
-
-}
-.nav-links{
+* {
     margin: 0;
-    list-style: none;
     padding: 0;
+}
+
+html, body {
+    background-color: #333;
+}
+/* Navbar Styles */
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Background color */
+    padding: 10px 40px; /* Increased side padding for navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    position: fixed absolute; /* Fix navbar at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Above other content */
+}
+
+.navbar .logo {
+    color: #04a1fb; /* Logo text color */
+    font-size: 1.5em; /* Font size for the logo */
+    font-weight: bold; /* Bold logo */
+}
+
+.nav-links {
+    list-style: none; /* Remove list styling */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 30px; /* Increased space between links */
+    position: relative;
+    left:-100px;
+}
+
+.nav-links li {
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #04a1fb; /* Link text color */
+    font-size: 1.2em; /* Font size for links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #04a1fb; /* Change color on hover */
+}
+
+
+.clock {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1200px; /* Doubled from 600px */
+    height: 700px; /* Doubled from 350px */
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    font-family: 'Quicksand', 'Helvetica', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.inside {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1000px; /* Doubled from 500px */
+    height: 500px; /* Doubled from 250px */
+    background-color: #222;
+}
+
+.content {
+    margin-top: 80px; /* Doubled from 40px */
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.days {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.days span {
+    margin-left: 20px; /* Doubled from 10px */
+    font-size: 2rem; /* Increased from 1rem to 2rem */
+}
+
+.text {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 200px; /* Doubled from 100px */
+    font-size: 5em; /* Doubled from 2.5em */
+}
+
+#time {
+    font-size: 3rem; /* Doubled from 1.5rem */
+}
+
+#date {
+    margin-top: 200px; /* Doubled from 100px */
+    margin-left: -200px; /* Doubled from -100px */
+    font-size: 3rem; /* Increased font size */
+}
+
+#cal img {
+    width: 60px; /* Doubled from 30px */
+    height: 60px; /* Doubled from 30px */
+}
+
+span#day {
+    position: absolute;
+    margin-top: 10px; /* Doubled from 5px */
+    margin-left: -40px; /* Doubled from 10px */
+    font-size: 3rem; /* Increased font size */
+}
+
+span#month {
+    position: absolute;
+    margin-top: 10px; /* Doubled from 5px */
+    margin-left: 20px; /* Doubled from 45px */
+    font-size: 3rem; /* Increased font size */
+}
+
+span#year {
+    position: absolute;
+    margin-top: 10px; /* Doubled from 5px */
+    margin-left: 170px; /* Doubled from 105px */
+    font-size: 3rem; /* Increased font size */
+}
+
+
+
+/* Timer Section */
+/* Basic styles omitted for brevity */
+
+/* Existing styles omitted for brevity */
+
+/* Timer Section Styles */
+.timer {
+    text-align: center;
+    top: 50px;
+    position: relative;
+    color:white;
+    font-family: 'Quicksand', 'Helvetica', Arial, sans-serif;
+    background: #222; /* Background color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 60px; /* Increased padding */
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+    margin: 60px auto; /* Increased margin */
+    width: 900px; /* Fixed width increased */
+}
+
+.timer-display {
+    font-size: 9em; /* Larger font size for better visibility */
+    margin: 60px 0; /* Space around display */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+.timer-controls {
+    display: flex; /* Flexbox for button layout */
+    justify-content: center; /* Center buttons */
+    gap: 30px; /* Increased space between buttons */
+}
+
+.timer-controls button {
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 30px 45px; /* Increased padding for button */
+    font-size: 3.6em; /* Increased font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.timer-controls button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Animation for timer display */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with invisible */
+    }
+    to {
+        opacity: 1; /* End with fully visible */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timer {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .timer-display {
+        font-size: 6em; /* Adjust font size on smaller screens */
+    }
 }
