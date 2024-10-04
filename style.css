@@ -1,0 +1,12 @@
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribute items evenly */
+  align-items: center; 
+
+}
+.nav-links{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
